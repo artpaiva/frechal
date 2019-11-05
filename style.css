@@ -84,6 +84,7 @@
     padding: 1rem 0;
 }
 .breviary{
+    margin-bottom: 1rem;
     color: #333;
     text-align: center;
 }
@@ -107,6 +108,33 @@
     display: inline-block;
     padding: 0 0.4rem;
 }
+.appendix{
+    position: sticky;
+    float: left;
+    top: 8rem;
+    margin-left: -6rem;
+    vertical-align: top;
+    list-style-type: none;
+}
+@media only screen and (max-width: 480px) {
+    .appendix{
+        display: none;
+    }
+}
+.appendix li{
+    cursor: pointer;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.6rem;
+}
+.appendix li img{
+    width: 100%;
+    transition: 0.3s;
+}
+.appendix li:hover img{
+    opacity: 0.8;
+    transform: translate(-0.6rem, -0rem);
+}
 
 .article-text{
     text-align: justify;
@@ -118,6 +146,10 @@
     line-height: 1.8rem;
 }
 .article-text a{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.article-text a:hover{
     color: #ddaa22;
 }
 .article-text br{

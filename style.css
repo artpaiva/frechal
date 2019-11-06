@@ -231,9 +231,49 @@ body{
     border-bottom: 1px solid #777;
     color: #555;
 }
+.bio-box{
+    cursor: pointer;
+    padding: 1.2rem 0;
+    border-top: 1px solid #00000011;
+    vertical-align: top;
+}
+.bio-box li{
+    display: inline-block;
+    vertical-align: top;
+}
+.bio-img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.bio-img img{
+    width: 100%;
+    transition: 0.3s;
+    filter: grayscale(100%) contrast(60%) brightness(120%);
+    transition: 0.2s;
+}
+.bio-box:hover .bio-img img{
+    opacity: 0.8;
+}
+.bio-text{
+    padding: 1rem;
+    color: #777;
+    text-align: justify;
+    transition: 0.2s;
+}
+.bio-box:hover .bio-text{
+    color: #999;
+}
+.bio-name{
+    color: #333;
+    font-size: 1.1rem;
+}
+.bio-text p{
+    text-indent: 2rem;
+}
 
 .floor{
-    margin-top: 1.2rem;
     padding: 3rem;
     border-top: 1px solid #00000011;
     text-align: center;

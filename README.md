@@ -1,1 +1,2 @@
-# frechal
+# Frechal
+A placeholder digital newspaper

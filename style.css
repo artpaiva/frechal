@@ -237,10 +237,6 @@ body{
     border-top: 1px solid #00000011;
     vertical-align: top;
 }
-.bio-box li{
-    display: inline-block;
-    vertical-align: top;
-}
 .bio-img{
     width: 8rem;
     height: 8rem;
@@ -252,9 +248,6 @@ body{
     transition: 0.3s;
     filter: grayscale(100%) contrast(60%) brightness(120%);
     transition: 0.2s;
-}
-.bio-box:hover .bio-img img{
-    opacity: 0.8;
 }
 .bio-text{
     padding: 1rem;
@@ -271,6 +264,23 @@ body{
 }
 .bio-text p{
     text-indent: 2rem;
+}
+@media only screen and (max-width: 680px) {
+    .bio-box td{
+        display: block;
+    }
+    .bio-img, .bio-name{
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+    .bio-img img{
+        margin: auto;
+        border-radius: 100%;
+        text-align: center;
+        width: 8rem;
+        height: 8rem;
+    }
 }
 
 .floor{

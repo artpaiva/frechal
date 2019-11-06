@@ -7,13 +7,16 @@
     font-family: 'Lustria', serif;
     scroll-behavior: smooth;
 }
+body{
+    background: #fafafa;
+}
 
 .cornice{
     position: sticky;
     top: 0;
     width: 100%;
-    border-bottom: 1px solid #555;
-    background: #fff;
+    border-bottom: 1px solid #999;
+    background: inherit;
     transition: background 0.3s, color 0.1s;
 }
 .cornice.scroll{
@@ -43,8 +46,9 @@
     width: 100%;
     max-width: 42rem;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 4rem;
     padding: 1rem;
+    border-left: 1px solid #00000005;
 }
 .breadcrumb-box{
     padding: 0 0.2rem 0.8rem;
@@ -62,9 +66,11 @@
   color: #333;
 }
 .breadcrumb-bran:after{
-  content: '›';
-  padding: 1rem;
-  color: #999;
+    content: '›';
+    padding: 1.4rem;
+    font-family: 'Lustria', serif;
+    font-style: normal;
+    color: #999;
 }
 .breadcrumb-bran.active, .breadcrumb-bran.active a{
   cursor: auto;
@@ -89,15 +95,21 @@
     text-align: center;
 }
 .breviary-title{
-    padding-bottom: 0.8rem;
     color: inherit;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-family: 'Spectral', serif;
+}
+.breviary-subtitle{
+    padding-bottom: 0.8rem;
+    color: #555;
+    font-size: 1.1rem;
     font-family: 'Spectral', serif;
 }
 .breviary-alias{
     display: inline-block;
     padding: 0.8rem;
     border-top: 1px solid #0000000a;
+    color: #777;
 }
 .breviary-alias li:not(:first-child):before{
     content: '|';
@@ -116,9 +128,17 @@
     vertical-align: top;
     list-style-type: none;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
     .appendix{
-        display: none;
+        /*display: none;*/
+        position: static;
+        top: auto;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .appendix li{
+        display: inline-block;
     }
 }
 .appendix li{
@@ -163,7 +183,7 @@
     font-size: 2rem;
 }
 .article-topic{
-    margin: 0.8rem 0 0.4rem;
+    margin: 1.2rem 0 0.4rem;
     font-family: 'Quattrocento', serif;
     font-size: 1.3rem;
     font-weight: 700;
@@ -190,4 +210,43 @@
     .article-quote{
         padding: 0.4rem 1rem;
     }
+}
+.taglist{
+    margin-top: 1rem;
+    padding: 0.8rem 0.4rem;
+    border-top: 1px solid #00000011;
+}
+.taglist .tag{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.2rem;
+    padding: 0.1rem 0.2rem;
+    border-bottom: 1px solid #333;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.1s;
+}
+.taglist .tag:hover{
+    border-bottom: 1px solid #777;
+    color: #555;
+}
+
+.floor{
+    margin-top: 1.2rem;
+    padding: 3rem;
+    border-top: 1px solid #00000011;
+    text-align: center;
+}
+.floor-front{
+    color: #00000033;
+    font-size: 2.4rem;
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-weight: 700;
+}
+.floor-low{
+    color: #00000055;
+    font-size: 0.8rem;
+    font-style: italic;
 }

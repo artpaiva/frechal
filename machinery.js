@@ -22,7 +22,9 @@ function changeTheme() {
   if (check.checked == true){
     console.log('Dark Theme');
     scrollClass = 'scroll';
-    cornice.classList.add(scrollClass);
+    if (document.body.scrollTop > 0 ) {
+        cornice.classList.add(scrollClass);
+    }
     cornice.classList.remove('scrolle');
   } else {
     console.log('Light Theme');

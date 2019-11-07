@@ -138,19 +138,6 @@ body{
     vertical-align: top;
     list-style-type: none;
 }
-@media only screen and (max-width: 720px) {
-    .appendix{
-        /*display: none;*/
-        position: static;
-        top: auto;
-        float: none;
-        margin: auto;
-        text-align: center;
-    }
-    .appendix li{
-        display: inline-block;
-    }
-}
 .appendix li{
     cursor: pointer;
     width: 3.2rem;
@@ -164,6 +151,21 @@ body{
 .appendix li:hover img{
     opacity: 0.8;
     /*transform: translate(-0.6rem, -0rem);*/
+}
+@media only screen and (max-width: 720px) {
+    .appendix{
+        /*display: none;*/
+        position: static;
+        top: auto;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .appendix li{
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+    }
 }
 
 .article-text{
@@ -517,11 +519,11 @@ body{
 }
 
 input:checked + .slider {
-  background-color: #333;
+  background-color: #222;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #333;
+  box-shadow: 0 0 1px #222;
 }
 
 input:checked + .slider:before {

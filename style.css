@@ -12,6 +12,7 @@ body{
 }
 
 .cornice{
+    z-index: 1000;
     position: sticky;
     top: 0;
     width: 100%;
@@ -42,11 +43,19 @@ body{
     font-weight: 700;
 }
 
+.ad-banner{
+    width: 100%;
+    max-width: 42rem;
+    margin: auto;
+    margin: 1rem auto;
+    padding: 4rem 2rem;
+    border: 1px dashed #00000055;
+}
 .torso{
     width: 100%;
     max-width: 42rem;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: 1rem;
     border-left: 1px solid #00000005;
 }
@@ -153,7 +162,7 @@ body{
 }
 .appendix li:hover img{
     opacity: 0.8;
-    transform: translate(-0.6rem, -0rem);
+    /*transform: translate(-0.6rem, -0rem);*/
 }
 
 .article-text{
@@ -183,10 +192,62 @@ body{
     font-size: 2rem;
 }
 .article-topic{
+    display: inline-block;
     margin: 1.2rem 0 0.4rem;
     font-family: 'Quattrocento', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
     font-weight: 700;
+}
+.article-native{
+    z-index: 1;
+    position: relative;
+    margin: 1rem auto;
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 00;
+}
+.article-native span{
+    z-index: 1;
+    position: relative;
+    padding: 0 0.4rem;
+    background: #fafafa;
+    font-family: 'Playfair Display', serif;
+}
+.article-native:before{
+    content: ' ';
+    z-index: -1;
+    position: absolute;
+    top: 0.9rem;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #00000033;
+}
+.next-wrapper{
+    text-align: center;
+}
+.article-next{
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.8rem 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 00;
+    background-image:
+    linear-gradient(45deg, transparent 65%, #333 80%, transparent 90%),
+    linear-gradient(135deg, transparent 5%, #333 15%, transparent 25%),
+    linear-gradient(135deg, transparent 45%, #333 55%, transparent 65%),
+    linear-gradient(45deg, transparent 25%, #333 35%, transparent 50%);
+    background-repeat:repeat-x;
+    background-size: 14px 4px;
+    background-position:0 100%;
+    animation: wiggle 20s linear infinite;
+}
+@keyframes wiggle {
+  0% { background-position: 0 100% }
+  100% { background-position: 100% 100% }
 }
 
 .article-quote{
@@ -197,6 +258,9 @@ body{
     color: #666;
     line-height: 1.8rem;
     font-style: italic;
+}
+.article-quote:first-letter{
+    font-size: 1.6rem;
 }
 .quote-author{
     right: 0;
@@ -211,6 +275,45 @@ body{
         padding: 0.4rem 1rem;
     }
 }
+.torso-order{
+    padding: 0.6rem 0rem 0.6rem 1.4rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+    list-style-type: upper-roman;
+}
+.torso-order li{
+    cursor: pointer;
+    width: 100%;
+    padding: 0.4rem 0rem;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
+.torso-order li:hover, .torso-order li.active{
+    background: #00000003;
+    color: #777;
+}
+.torso-order li:after{
+    content: '+';
+    float: right;
+    padding-right: 1rem;
+}
+.torso-order li.active:after{
+    content: '-';
+}
+.torso-panel{
+    max-height: 0;
+    padding: 0 1rem;
+    border-bottom: 1px solid transparent;
+    text-align: justify;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.torso-order li.active + .torso-panel{
+    max-height: 20rem;
+    border-bottom: 1px solid #00000011;
+    overflow: auto;
+}
 .taglist{
     margin-top: 1rem;
     padding: 0.8rem 0.4rem;
@@ -221,15 +324,33 @@ body{
     display: inline-block;
     margin: 0 0.2rem;
     padding: 0.1rem 0.2rem;
-    border-bottom: 1px solid #333;
+    /*border-bottom: 1px solid #333;*/
+    text-decoration: underline;
     color: #333;
     font-size: 0.8rem;
     font-weight: 700;
     transition: 0.1s;
 }
 .taglist .tag:hover{
-    border-bottom: 1px solid #777;
     color: #555;
+}
+.nav-belt{
+    cursor: pointer;
+    list-style-type: none;
+    text-align: center;
+}
+.nav-item{
+    display: inline-block;
+    margin: 0;
+    padding: 1rem;
+}
+.nav-item i{
+    color: #333;
+    font-size: 1.8rem;
+    transition: 0.2s;
+}
+.nav-item:hover i{
+    transform: translate(0, -0.3rem);
 }
 .bio-box{
     cursor: pointer;
@@ -253,14 +374,35 @@ body{
     padding: 1rem;
     color: #777;
     text-align: justify;
-    transition: 0.2s;
 }
-.bio-box:hover .bio-text{
-    color: #999;
+.bio-text:first-letter, .bio-text p:first-letter{
+    font-size: 1.2rem;
 }
 .bio-name{
     color: #333;
     font-size: 1.1rem;
+    transition: 0.2s;
+
+}
+.bio-name:hover{
+    color: #999;
+}
+.bio-social{
+    display: inline-block;
+    margin-left: 0.6rem;
+}
+.bio-social li{
+    display: inline-block;
+    margin: 0 0.1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.bio-social li img{
+    width: 100%;
+    transition: 0.3s;
+}
+.bio-social li:hover img{
+    transform: translate(0, -0.2rem);
 }
 .bio-text p{
     text-indent: 2rem;
@@ -299,4 +441,27 @@ body{
     color: #00000055;
     font-size: 0.8rem;
     font-style: italic;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  transition: 0.3s;
+}
+::-webkit-scrollbar *{
+  transition: 0.3s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333; 
 }

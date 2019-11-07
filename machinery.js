@@ -11,3 +11,7 @@ window.onscroll = function (){
         cornice.classList.remove("scroll");
     }
 };
+
+function turnTorsoPanel(ele) {
+    ele.classList.toggle("active");
+}

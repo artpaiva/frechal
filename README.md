@@ -1,2 +1,2 @@
 # Frechal
-A placeholder digital newspaper
+An article page for a placeholder digital news publication

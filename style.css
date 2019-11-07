@@ -133,7 +133,7 @@ body{
 .appendix{
     position: sticky;
     float: left;
-    top: 40%;
+    top: 8rem;
     margin-left: -6rem;
     vertical-align: top;
     list-style-type: none;
@@ -231,7 +231,7 @@ body{
     text-align: center;
 }
 .article-next{
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 1rem auto;
     padding: 0.8rem 1rem;
     font-family: 'Playfair Display', serif;

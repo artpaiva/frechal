@@ -133,7 +133,7 @@ body{
 .appendix{
     position: sticky;
     float: left;
-    top: 8rem;
+    top: 6rem;
     margin-left: -6rem;
     vertical-align: top;
     list-style-type: none;
@@ -166,6 +166,36 @@ body{
         width: 3rem;
         height: 3rem;
     }
+}
+
+.bio-wing{
+    position: sticky;
+    float: right;
+    top: 6rem;
+    margin-right: -10rem;
+    vertical-align: top;
+    list-style-type: none;
+    text-align: center;
+}
+.bio-wing .bio-name{
+    margin-top: 0.6rem;
+    padding: 0.4rem auto;
+}
+.bio-wing  .bio-social{
+    display: block;
+    margin-left: 0;
+    margin-top: 0.2rem;
+}
+.bio-wing .bio-text{
+    width: 8rem;
+    padding: 0;
+    font-size: 0.8rem;
+}
+.bio-wing .bio-text p{
+    text-indent: 0.4rem;
+}
+.bio-wing .bio-text:first-letter, .bio-wing .bio-text p:first-letter{
+    font-size: 1rem;
 }
 
 .article-text{
@@ -232,7 +262,8 @@ body{
 }
 .article-next{
     /*display: inline-block;*/
-    margin: 1rem auto;
+    margin: 0.1rem auto;
+    width: 50%;
     padding: 0.8rem 1rem;
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -357,7 +388,7 @@ body{
 }
 .bio-box{
     cursor: pointer;
-    padding: 1.2rem 0;
+    padding: 1.2rem 0 0;
     border-top: 1px solid #00000011;
     vertical-align: top;
 }
@@ -374,7 +405,7 @@ body{
     transition: 0.2s;
 }
 .bio-text{
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     color: #777;
     text-align: justify;
 }
@@ -382,6 +413,7 @@ body{
     font-size: 1.2rem;
 }
 .bio-name{
+    display: inline-block;
     color: #333;
     font-size: 1.1rem;
     transition: 0.2s;

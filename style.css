@@ -51,6 +51,11 @@ body{
     padding: 4rem 2rem;
     border: 1px dashed #00000055;
 }
+.ad-banner.vertical{
+    width: 100%;
+    margin: 1rem auto;
+    padding: 10rem 2rem;
+}
 .torso{
     width: 100%;
     max-width: 42rem;
@@ -196,6 +201,24 @@ body{
 }
 .bio-wing .bio-text:first-letter, .bio-wing .bio-text p:first-letter{
     font-size: 1rem;
+}
+@media only screen and (max-width: 720px) {
+    .bio-wing{
+        position: static;
+        top: auto;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .bio-wing li{
+        display: inline-block;
+    }
+    .bio-wing .bio-img,
+    .bio-wing .ad-banner,
+    .bio-wing .bio-social,
+    .bio-wing .bio-text{
+        display: none;
+    }
 }
 
 .article-text{

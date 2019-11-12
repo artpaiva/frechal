@@ -3,5 +3,5 @@ A template article page for a placeholder digital news publication. Stylised for
 ___
 Includes:
 - Loading articles after the end of the first
-- Author's Biography side sticky
+- Author's Biography side box sticky
 - Quotes
